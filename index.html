@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Calories Calculator</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 10px;
+        }
+        input {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Bodyweight (lbs)</th>
+            <th>Caloric Intake</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight0" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories0" placeholder="Caloric Intake">
+                <button onclick="fillCalories()">↓</button>
+                <button onclick="clearCalories()">✖</button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight1" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories1" placeholder="Caloric Intake"></td>
+        </tr>
+        <!-- Repeat for other weeks -->
+        <tr>
+            <td><input type="text" id="weight2" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories2" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight3" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories3" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight4" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories4" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight5" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories5" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight6" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories6" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight7" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories7" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight8" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories8" placeholder="Caloric Intake"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="weight9" placeholder="Bodyweight"></td>
+            <td><input type="text" id="calories9" placeholder="Caloric Intake"></td>
+        </tr>
+        <!-- End repeat -->
+    </table>
+    <button onclick="calculateMaintenance()">Calculate</button>
+    <p id="result"></p>
+    <script src="script.js"></script> <!-- Link to the JS file -->
+</body>
+</html>
