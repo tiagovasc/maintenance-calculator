@@ -16,12 +16,13 @@ document.getElementById("calculate").addEventListener("click", calculateMaintena
 function calculateMaintenance() {
     var totalCalories = 0;
     var totalWeightLost = 0;
+
     for (var i = 0; i < 9; i++) {
         var weight = parseFloat(document.getElementById('weight' + i).value);
         var nextWeight = parseFloat(document.getElementById('weight' + (i + 1)).value);
         var calories = parseFloat(document.getElementById('calories' + i).value);
 
-        if (isNaN(weight) || isNaN(nextWeight) || isNaN(calories) || weight === "" || nextWeight === "" || calories === "") continue;
+        if (isNaN(weight) || isNaN(nextWeight) || isNaN(calories)) continue;
 
         var weightLost = weight - nextWeight;
         if (document.getElementById('unit').value === 'kg') {
@@ -29,9 +30,9 @@ function calculateMaintenance() {
         }
 
         totalWeightLost += weightLost;
-        totalCalories += (calories + (weightLost * 500));
+        totalCalories += calories;
     }
 
-    var maintenanceCalories = totalCalories / (totalWeightLost > 0 ? (totalWeightLost) : 1);
+    var maintenanceCalories = totalCalories / (totalWeightLost > 0 ? totalWeightLost : 1) + 500;
     document.getElementById('result').textContent = 'Maintenance Calories: ' + maintenanceCalories.toFixed(2);
 }
