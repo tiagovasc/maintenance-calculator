@@ -23,7 +23,6 @@ function calculateMaintenance() {
 
         if (isNaN(weight) || isNaN(nextWeight) || isNaN(calories) || weight === "" || nextWeight === "" || calories === "") continue;
 
-        // Convert weight loss to lbs if kg is selected
         var weightLost = weight - nextWeight;
         if (document.getElementById('unit').value === 'kg') {
             weightLost *= 2.20462; // Convert kilograms to pounds
@@ -33,6 +32,6 @@ function calculateMaintenance() {
         totalCalories += (calories + (weightLost * 500));
     }
 
-    var maintenanceCalories = totalCalories / (totalWeightLost > 0 ? (totalWeightLost + 1) : 1);
+    var maintenanceCalories = totalCalories / (totalWeightLost > 0 ? (totalWeightLost) : 1);
     document.getElementById('result').textContent = 'Maintenance Calories: ' + maintenanceCalories.toFixed(2);
 }
